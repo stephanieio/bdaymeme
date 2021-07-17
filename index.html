@@ -17,6 +17,23 @@
                 border-radius: 50%;
                 width: 100px;
             }
+            
+            .image {
+                position: relative;
+                display: inline-block;
+            }
+
+            .talking {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 99;
+            }
+
+            .image:hover .talking, .image:active .talking {
+                display: inline;
+            }
         </style>
         <script src="confetti.min.js"></script>
     </head>
@@ -24,8 +41,12 @@
     <canvas id="my-canvas"></canvas>
     <div class="main">
         <h1>Hi Stephen</h1>
-        <img src="image.png">
         <h2>Happy Birthday!</h2>   
+        <div class="image">
+            <img src="image2.png" class="talking">
+            <span class="talking" style="font-family: 'Comic Sans MS'; margin-top: 100px">YOU'RE SHIT TIER</span>
+            <img src="image.png">
+        </div>
     </div>
 
     <script>
