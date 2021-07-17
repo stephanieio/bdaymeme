@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .main {
+                font-family: Helvetica, Arial, sans-serif;
+                text-align: center;
+                position: absolute;
+                top: 10%;
+                left: 0;
+                right: 0;
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            img {
+                border-radius: 50%;
+                width: 100px;
+            }
+        </style>
+        <script src="confetti.min.js"></script>
+    </head>
+<body>
+    <canvas id="my-canvas"></canvas>
+    <div class="main">
+        <h1>Hi Stephen</h1>
+        <img src="image.png">
+        <h2>Happy Birthday!</h2>   
+    </div>
+
+    <script>
+        var confettiElement = document.getElementById('my-canvas');
+        var confettiSettings = {
+            "target": confettiElement, 
+            "props":[
+                "circle","square","line",
+                {"type":"svg","src":"paco.svg","size":25,"weight":0.2},
+                {"type":"svg","src":"floki.svg","size":25,"weight":0.2},
+            ]
+        };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script>
+</body>
